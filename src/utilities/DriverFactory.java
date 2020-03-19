@@ -22,9 +22,9 @@ public class DriverFactory {
 		
 		
 		
-		String chromeLocation = "D:\\selenium\\nvhuy\\drivers\\chromedriver_v80_new.exe";
-		String ieLocation = "D:\\selenium\\nvhuy\\drivers\\IEDriverServer.exe";
-		String ffLocation = "D:\\selenium\\nvhuy\\drivers\\geckodriver.exe";
+		String chromeLocation = "D:\\BBBB_JAVA_Selenium\\eclipse-jee-2019-12-R-win32-x86_64\\software\\chromedriver.exe";
+		String ieLocation = "D:\\BBBB_JAVA_Selenium\\eclipse-jee-2019-12-R-win32-x86_64\\software\\IEDriverServerWin32_3.150.1.exe";
+		String ffLocation = "D:\\BBBB_JAVA_Selenium\\eclipse-jee-2019-12-R-win32-x86_64\\software\\geckodriver_v0.26.0-win32.exe";
 		
 		if (browserType.equalsIgnoreCase("ie")) {
 			System.setProperty("webdriver.ie.driver", ieLocation);
