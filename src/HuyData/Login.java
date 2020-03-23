@@ -1,4 +1,6 @@
-package tests;
+package HuyData;
+
+import java.util.concurrent.TimeUnit;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -9,27 +11,29 @@ import pages.LoginPage;
 
 public class Login {
 	@Test
-	public void LoginTestPOM() {
+	public void POMExample() {
 
-		// 1. Initialize driver
+		// 1. driver
 		WebDriver driver = utilities.DriverFactory.CreateDriver("chrome");
+		driver.manage().deleteAllCookies();
+		driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		driver.get("http://sdettraining.com/trguitransactions/AccountManagement.aspx");
 
-		// 2. Enter login information (Login Page)
-		LoginPage loginPage = new LoginPage(driver);
-		loginPage.setUserName("huy@gmail.com");
-		loginPage.setPassword("123");
-		loginPage.clickSubmit();
+		// 2 login
+		LoginPage LoginSDETpage = new LoginPage(driver);
+		LoginSDETpage.setUserName("huy@gmail.com");
+		LoginSDETpage.setPassword("1234");
+		LoginSDETpage.clickSubmit();
 
-		// 3. Get Confirmation (Dashboard Page)
+		// 3 Get info
 		DashboardPage dashboardPage = new DashboardPage(driver);
 		String conf = dashboardPage.confirmationMessage();
 
-		// 4. Assertions
+		// 4 Assertion
 		Assert.assertTrue(conf.contains("successfully"));
 
-		// 5. Close the driver
+		// 5 Close
+		driver.close();
 		driver.quit();
-
 	}
 }

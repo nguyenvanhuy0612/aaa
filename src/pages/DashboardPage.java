@@ -7,14 +7,10 @@ public class DashboardPage {
 	WebDriver driver;
 
 	public String confirmationMessage() {
-		return driver.findElement(By.id("conf_message")).getText();
+		return driver.findElement(By.xpath("//*[@id='conf_message']")).getText();
 	}
 
-	public String titlePage() {
-		return driver.getTitle();
-	}
-
-	public void changePassword() {
+	public void clickChangePassword() {
 		driver.findElement(By.linkText("Change password")).click();
 	}
 

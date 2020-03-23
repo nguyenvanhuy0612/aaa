@@ -62,6 +62,7 @@ public class WorkspaceEWC2 {
 	@AfterMethod
 	public void TearDown() {
 		driver.close();
+		driver.quit();
 	}
 
 	public static void Hover(WebDriver driver, WebElement element) {
@@ -72,15 +73,21 @@ public class WorkspaceEWC2 {
 	public void openAndSwitchNewTabs(String URL) {
 		((JavascriptExecutor) driver).executeScript("window.open()");
 		windows = new ArrayList<String>(driver.getWindowHandles());
+		winLists = new ArrayList<String>(driver.getWindowHandles());
+		winset = driver.getWindowHandles();
 		System.out.println("openAndSwitchNewTabs + Windows Array: "+windows);
 		Iterator<String> itr = windows.iterator();
+		Iterator<String> itr1 = winLists.iterator();
+		Iterator<String> itr2 = winset.iterator();
 		System.out.println("openAndSwitchNewTabs + itr: "+itr);
+		System.out.println("openAndSwitchNewTabs + itr1: "+itr1);
+		System.out.println("openAndSwitchNewTabs + itr2: "+itr2);
 		String currWindow = driver.getWindowHandle();
 		System.out.println("openAndSwitchNewTabs + currWindow: "+currWindow);
-		while (itr.hasNext()) {
-			String window = itr.next();
+		while (itr2.hasNext()) {
+			String window = itr2.next();
 			if (window.equalsIgnoreCase(currWindow)) {
-				window = itr.next();
+				window = itr2.next();
 				driver.switchTo().window(window);
 				driver.get(URL);
 				break;
