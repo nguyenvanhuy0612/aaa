@@ -8,3 +8,15 @@ Scenario: the user should be able to login with correct username and correct pas
 Given user is on the login page
 When user enters correct username and correct password
 Then user gets confirmation
+
+Scenario Outline: the user should by able to login
+Given user is on the login page
+When user enters email<username>
+And user enters password <password>
+Then user gets confirmation
+
+Examples:
+| username | password |
+|	huy@gmail.com	|	1234	|
+|	huy@gmail.com	|	1234	|
+|	huy@gmail.com	|	1234	|

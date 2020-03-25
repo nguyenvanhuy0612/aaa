@@ -12,6 +12,8 @@ Stackoverflow ,Guru99 hay ToolSQA
 
 Tut
 https://www.youtube.com/watch?v=3UCgGRbVA5I&list=PLpTCO0Fa9GR3QfiFocwoj0Gvu-o16YBDa&index=4&t=0s
+locator
+https://viblo.asia/p/locator-cac-cach-de-lay-locator-cua-web-element-jvEla4LzZkw
 
 wait
 https://www.guru99.com/implicit-explicit-waits-selenium.html#2
@@ -39,10 +41,14 @@ Cac windows: List String
 ===============
 https://stackoverflow.com/questions/32971546/how-to-wait-for-input-element-enabled-in-selenium-webdriver
 
-============
-cucumber
-
-https://viblo.asia/p/cucumber-p1-gioi-thieu-tong-quan-YWOZrD8v5Q0
+https://viblo.asia/p/lam-sao-de-su-dung-lenh-wait-hieu-qua-trong-selenium-webdriver-djeZ1p0jKWz
+[
+form chuan:
+Thread.sleep(500); 
+WebDriverWait wait = new WebDriverWait(driver,20); //20 seconds
+wait.until(ExpectedConditions.elementToBeClickable(element));
+driver.findElement(element).click(); 
+]
 		
 		
 		

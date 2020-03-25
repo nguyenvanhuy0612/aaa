@@ -10,5 +10,7 @@
 	<classpathentry kind="lib" path="D:/BBBB_JAVA_Selenium/eclipse-jee-2019-12-R-win32-x86_64/software/junit-4.13.jar"/>
 	<classpathentry kind="lib" path="D:/BBBB_JAVA_Selenium/eclipse-jee-2019-12-R-win32-x86_64/software/poi-3.17.jar"/>
 	<classpathentry kind="lib" path="D:/BBBB_JAVA_Selenium/eclipse-jee-2019-12-R-win32-x86_64/software/selenium-server-standalone-3.141.59.jar"/>
+	<classpathentry kind="lib" path="D:/BBBB_JAVA_Selenium/eclipse-jee-2019-12-R-win32-x86_64/software/cucumber-jvm-deps-1.0.6.jar"/>
+	<classpathentry kind="lib" path="D:/BBBB_JAVA_Selenium/eclipse-jee-2019-12-R-win32-x86_64/software/gherkin-2.12.2.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
