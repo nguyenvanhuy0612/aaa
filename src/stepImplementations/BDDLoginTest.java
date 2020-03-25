@@ -2,15 +2,16 @@ package stepImplementations;
 
 import java.util.concurrent.TimeUnit;
 
-import org.junit.After;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
+import cucumber.api.java.After;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
+
 
 public class BDDLoginTest {
 
@@ -32,16 +33,17 @@ public class BDDLoginTest {
 		driver.findElement(By.id("MainContent_btnLogin")).click();
 	}
 
-	@When("^user enters username <.*>$")
+	@When("^user enters username (.*)$")
 	public void user_enters_username(String username) {
 		System.out.println("TESTING: " + username);
 		driver.findElement(By.id("MainContent_txtUserName")).sendKeys(username);
 	}
 
-	@And("^user enters <.*>$")
+	@And("^user enters password (.*)$")
 	public void user_inters_password(String password) {
 		System.out.println("password: " + password);
-		driver.findElement(By.id("MainContent_txtPassword")).sendKeys(password);  	
+		driver.findElement(By.id("MainContent_txtPassword")).sendKeys(password);  
+		driver.findElement(By.id("MainContent_btnLogin")).click(); 
 	}
 
 	@Then("^user gets confirmation$")
